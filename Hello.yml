@@ -1,6 +1,6 @@
 ---
 - name : Demo Playbook
-- hosts: localhost
+  hosts: localhost
   connection: local 
   tasks:
     - name: Print message
