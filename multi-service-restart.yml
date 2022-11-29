@@ -1,4 +1,5 @@
 #restart multiple services
+---
 - name: service activation 
   service: 
     name: {{ item }} 
