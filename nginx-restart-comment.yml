@@ -17,7 +17,7 @@
           user: "Job {{ tower_job_id }}"
           context: Ansible Tower
         body_format: json
-        status_code: 200
+        status_code: 201
     - name: restart nginx
       service:
           name: nginx
@@ -33,4 +33,4 @@
           user: "Job {{ tower_job_id }}"
           context: Ansible Tower
         body_format: json
-        status_code: 200
+        status_code: 201
