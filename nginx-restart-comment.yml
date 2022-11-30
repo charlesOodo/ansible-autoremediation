@@ -9,7 +9,7 @@
     - name: "update problem with comment before auto-remediation"
       when: state == "OPEN"
       uri:
-        url: https://{{ dynatrace_api_url }}/api/v2/problem/{{ pid }}/comments?Api-Token={{ dynatrace_token }}
+        url: https://{{ dynatrace_api_url }}/api/v2/problems/{{ pid }}/comments?Api-Token={{ dynatrace_token }}
         method: POST
         body:
           comment: Problem notification received by Ansible Tower.  Attempting to perform auto-remediation.
@@ -24,7 +24,7 @@
     - name: "update problem with comment after remediation"
       when: state == "OPEN" 
       uri:
-        url: https://{{ dynatrace_api_url }}/api/v1/problem/{{ pid }}/comments?Api-Token={{ dynatrace_token }}
+        url: https://{{ dynatrace_api_url }}/api/v1/problems/{{ pid }}/comments?Api-Token={{ dynatrace_token }}
         method: POST
         body:
           comment: "Successfully triggered auto-remediation.'"
