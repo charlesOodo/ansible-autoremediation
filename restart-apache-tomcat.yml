@@ -1,0 +1,10 @@
+---
+- name: Starting Tomcat8
+  hosts: all
+  task:
+    - name: Enable the tomcat service and start
+      become: yes
+      systemd:
+        name: tomcat
+        enabled: yes
+        state: started

@@ -1,0 +1,9 @@
+---
+- name: Starting httpd
+  hosts: all
+  task:
+    - name: "web Server start"
+      service:
+        name: "httpd"
+        state: started
+        enabled: yes
