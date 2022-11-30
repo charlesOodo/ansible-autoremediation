@@ -21,7 +21,7 @@
     - name: restart nginx
       service:
           name: nginx
-          state: started
+          state: started 
     - name: "update problem with comment after remediation"
       when: state == "OPEN" 
       uri:
