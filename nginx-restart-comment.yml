@@ -12,7 +12,8 @@
         url: https://{{ dynatrace_api_url }}/api/v2/problems/{{ pid }}/comments?Api-Token={{ dynatrace_token }}
         method: POST
         body:
-          comment: Problem notification received by Ansible Tower.  Attempting to perform auto-remediation.
+          comment: "Problem notification received by Ansible Tower.  Attempting to perform auto-remediation."
+          message: "comment: Problem notification received by Ansible Tower.  Attempting to perform auto-remediation."
           user: "Job {{ tower_job_id }}"
           context: Ansible Tower
         body_format: json
@@ -27,7 +28,8 @@
         url: https://{{ dynatrace_api_url }}/api/v1/problems/{{ pid }}/comments?Api-Token={{ dynatrace_token }}
         method: POST
         body:
-          comment: "Successfully triggered auto-remediation.'"
+          comment: "Successfully triggered auto-remediation."
+          message: "Successfully triggered auto-remediation."
           user: "Job {{ tower_job_id }}"
           context: Ansible Tower
         body_format: json
