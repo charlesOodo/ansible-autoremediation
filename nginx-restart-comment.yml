@@ -13,7 +13,7 @@
         method: POST
         body:
           comment: "Problem notification received by Ansible Tower.  Attempting to perform auto-remediation."
-          message: "comment: Problem notification received by Ansible Tower.  Attempting to perform auto-remediation."
+          message: "Problem notification received by Ansible Tower.  Attempting to perform auto-remediation."
           user: "Job {{ tower_job_id }}"
           context: Ansible Tower
         body_format: json
