@@ -1,8 +1,8 @@
 - hosts: all
   vars:
-    dynatrace_api_url: {{ dynatrace_api_url }}
-    dynatrace_token: {{ token }}
-    state: {{ state }}
+    dynatrace_api_url: "{{ dynatrace_api_url }}"
+    dynatrace_token: "{{ token }}"
+    state: "{{ state }}"
   tasks:
 #     - name: ensure nginx is at the latest version
 #       apt: name=nginx state=latest
