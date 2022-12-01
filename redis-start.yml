@@ -22,7 +22,6 @@
           name: redis-server
           state: started 
           enabled: yes
-          sudo: true
     - name: "update problem with comment after remediation"
       when: state == "OPEN" 
       uri:
