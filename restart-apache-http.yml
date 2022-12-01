@@ -19,7 +19,7 @@
         status_code: 201
     - name: start Apache Web Server
       service:
-          name: "httpd"
+          name: httpd
           state: started 
           enabled: yes
           sudo: true
