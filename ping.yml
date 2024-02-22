@@ -1,4 +1,10 @@
-- hosts:
-    - all
+---
+- name: demo
+  hosts: all
+  become: yes
   tasks:
-    - action: ping
+    - name: run demo task of pinging
+      ping:
+    - name: debug task
+      debug:
+        msg: "{{ ansible_facts }}"
